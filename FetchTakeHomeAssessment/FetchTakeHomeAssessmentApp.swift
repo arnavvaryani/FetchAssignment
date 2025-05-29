@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct FetchTakeHomeAssesmentApp: App {
+struct FetchTakeHomeAssessmentApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecipeView()
         }
     }
 }

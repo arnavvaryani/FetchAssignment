@@ -24,25 +24,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		479CE4802DEDCB9700750F37 /* FetchTakeHomeAssesment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchTakeHomeAssesment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		479CE48D2DEDCB9900750F37 /* FetchTakeHomeAssesmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchTakeHomeAssesmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		479CE4972DEDCB9900750F37 /* FetchTakeHomeAssesmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchTakeHomeAssesmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		479CE4802DEDCB9700750F37 /* FetchTakeHomeAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchTakeHomeAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		479CE48D2DEDCB9900750F37 /* FetchTakeHomeAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchTakeHomeAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		479CE4972DEDCB9900750F37 /* FetchTakeHomeAssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchTakeHomeAssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		479CE4822DEDCB9700750F37 /* FetchTakeHomeAssesment */ = {
+		479CE4822DEDCB9700750F37 /* FetchTakeHomeAssessment */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FetchTakeHomeAssesment;
+			path = FetchTakeHomeAssessment;
 			sourceTree = "<group>";
 		};
-		479CE4902DEDCB9900750F37 /* FetchTakeHomeAssesmentTests */ = {
+		479CE4902DEDCB9900750F37 /* FetchTakeHomeAssessmentTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FetchTakeHomeAssesmentTests;
+			path = FetchTakeHomeAssessmentTests;
 			sourceTree = "<group>";
 		};
-		479CE49A2DEDCB9900750F37 /* FetchTakeHomeAssesmentUITests */ = {
+		479CE49A2DEDCB9900750F37 /* FetchTakeHomeAssessmentUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FetchTakeHomeAssesmentUITests;
+			path = FetchTakeHomeAssessmentUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +75,9 @@
 		479CE4772DEDCB9700750F37 = {
 			isa = PBXGroup;
 			children = (
-				479CE4822DEDCB9700750F37 /* FetchTakeHomeAssesment */,
-				479CE4902DEDCB9900750F37 /* FetchTakeHomeAssesmentTests */,
-				479CE49A2DEDCB9900750F37 /* FetchTakeHomeAssesmentUITests */,
+				479CE4822DEDCB9700750F37 /* FetchTakeHomeAssessment */,
+				479CE4902DEDCB9900750F37 /* FetchTakeHomeAssessmentTests */,
+				479CE49A2DEDCB9900750F37 /* FetchTakeHomeAssessmentUITests */,
 				479CE4812DEDCB9700750F37 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +85,9 @@
 		479CE4812DEDCB9700750F37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				479CE4802DEDCB9700750F37 /* FetchTakeHomeAssesment.app */,
-				479CE48D2DEDCB9900750F37 /* FetchTakeHomeAssesmentTests.xctest */,
-				479CE4972DEDCB9900750F37 /* FetchTakeHomeAssesmentUITests.xctest */,
+				479CE4802DEDCB9700750F37 /* FetchTakeHomeAssessment.app */,
+				479CE48D2DEDCB9900750F37 /* FetchTakeHomeAssessmentTests.xctest */,
+				479CE4972DEDCB9900750F37 /* FetchTakeHomeAssessmentUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +95,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		479CE47F2DEDCB9700750F37 /* FetchTakeHomeAssesment */ = {
+		479CE47F2DEDCB9700750F37 /* FetchTakeHomeAssessment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 479CE4A12DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssesment" */;
+			buildConfigurationList = 479CE4A12DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssessment" */;
 			buildPhases = (
 				479CE47C2DEDCB9700750F37 /* Sources */,
 				479CE47D2DEDCB9700750F37 /* Frameworks */,
@@ -108,18 +108,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				479CE4822DEDCB9700750F37 /* FetchTakeHomeAssesment */,
+				479CE4822DEDCB9700750F37 /* FetchTakeHomeAssessment */,
 			);
-			name = FetchTakeHomeAssesment;
+			name = FetchTakeHomeAssessment;
 			packageProductDependencies = (
 			);
 			productName = FetchTakeHomeAssesment;
-			productReference = 479CE4802DEDCB9700750F37 /* FetchTakeHomeAssesment.app */;
+			productReference = 479CE4802DEDCB9700750F37 /* FetchTakeHomeAssessment.app */;
 			productType = "com.apple.product-type.application";
 		};
-		479CE48C2DEDCB9900750F37 /* FetchTakeHomeAssesmentTests */ = {
+		479CE48C2DEDCB9900750F37 /* FetchTakeHomeAssessmentTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 479CE4A42DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssesmentTests" */;
+			buildConfigurationList = 479CE4A42DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssessmentTests" */;
 			buildPhases = (
 				479CE4892DEDCB9900750F37 /* Sources */,
 				479CE48A2DEDCB9900750F37 /* Frameworks */,
@@ -131,18 +131,18 @@
 				479CE48F2DEDCB9900750F37 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				479CE4902DEDCB9900750F37 /* FetchTakeHomeAssesmentTests */,
+				479CE4902DEDCB9900750F37 /* FetchTakeHomeAssessmentTests */,
 			);
-			name = FetchTakeHomeAssesmentTests;
+			name = FetchTakeHomeAssessmentTests;
 			packageProductDependencies = (
 			);
 			productName = FetchTakeHomeAssesmentTests;
-			productReference = 479CE48D2DEDCB9900750F37 /* FetchTakeHomeAssesmentTests.xctest */;
+			productReference = 479CE48D2DEDCB9900750F37 /* FetchTakeHomeAssessmentTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		479CE4962DEDCB9900750F37 /* FetchTakeHomeAssesmentUITests */ = {
+		479CE4962DEDCB9900750F37 /* FetchTakeHomeAssessmentUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 479CE4A72DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssesmentUITests" */;
+			buildConfigurationList = 479CE4A72DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssessmentUITests" */;
 			buildPhases = (
 				479CE4932DEDCB9900750F37 /* Sources */,
 				479CE4942DEDCB9900750F37 /* Frameworks */,
@@ -154,13 +154,13 @@
 				479CE4992DEDCB9900750F37 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				479CE49A2DEDCB9900750F37 /* FetchTakeHomeAssesmentUITests */,
+				479CE49A2DEDCB9900750F37 /* FetchTakeHomeAssessmentUITests */,
 			);
-			name = FetchTakeHomeAssesmentUITests;
+			name = FetchTakeHomeAssessmentUITests;
 			packageProductDependencies = (
 			);
 			productName = FetchTakeHomeAssesmentUITests;
-			productReference = 479CE4972DEDCB9900750F37 /* FetchTakeHomeAssesmentUITests.xctest */;
+			productReference = 479CE4972DEDCB9900750F37 /* FetchTakeHomeAssessmentUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -186,7 +186,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 479CE47B2DEDCB9700750F37 /* Build configuration list for PBXProject "FetchTakeHomeAssesment" */;
+			buildConfigurationList = 479CE47B2DEDCB9700750F37 /* Build configuration list for PBXProject "FetchTakeHomeAssessment" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +200,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				479CE47F2DEDCB9700750F37 /* FetchTakeHomeAssesment */,
-				479CE48C2DEDCB9900750F37 /* FetchTakeHomeAssesmentTests */,
-				479CE4962DEDCB9900750F37 /* FetchTakeHomeAssesmentUITests */,
+				479CE47F2DEDCB9700750F37 /* FetchTakeHomeAssessment */,
+				479CE48C2DEDCB9900750F37 /* FetchTakeHomeAssessmentTests */,
+				479CE4962DEDCB9900750F37 /* FetchTakeHomeAssessmentUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +258,12 @@
 /* Begin PBXTargetDependency section */
 		479CE48F2DEDCB9900750F37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 479CE47F2DEDCB9700750F37 /* FetchTakeHomeAssesment */;
+			target = 479CE47F2DEDCB9700750F37 /* FetchTakeHomeAssessment */;
 			targetProxy = 479CE48E2DEDCB9900750F37 /* PBXContainerItemProxy */;
 		};
 		479CE4992DEDCB9900750F37 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 479CE47F2DEDCB9700750F37 /* FetchTakeHomeAssesment */;
+			target = 479CE47F2DEDCB9700750F37 /* FetchTakeHomeAssessment */;
 			targetProxy = 479CE4982DEDCB9900750F37 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -400,6 +400,7 @@
 				DEVELOPMENT_TEAM = 6LJNAC4NY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Fetch;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -410,7 +411,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.recipes.FetchTakeHomeAssesment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assignment.FetchRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -428,6 +429,7 @@
 				DEVELOPMENT_TEAM = 6LJNAC4NY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Fetch;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -438,7 +440,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.recipes.FetchTakeHomeAssesment;
+				PRODUCT_BUNDLE_IDENTIFIER = com.assignment.FetchRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -461,7 +463,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FetchTakeHomeAssesment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FetchTakeHomeAssesment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FetchTakeHomeAssessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FetchTakeHomeAssessment";
 			};
 			name = Debug;
 		};
@@ -480,7 +482,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FetchTakeHomeAssesment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FetchTakeHomeAssesment";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FetchTakeHomeAssessment.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FetchTakeHomeAssessment";
 			};
 			name = Release;
 		};
@@ -521,7 +523,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		479CE47B2DEDCB9700750F37 /* Build configuration list for PBXProject "FetchTakeHomeAssesment" */ = {
+		479CE47B2DEDCB9700750F37 /* Build configuration list for PBXProject "FetchTakeHomeAssessment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				479CE49F2DEDCB9900750F37 /* Debug */,
@@ -530,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		479CE4A12DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssesment" */ = {
+		479CE4A12DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssessment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				479CE4A22DEDCB9900750F37 /* Debug */,
@@ -539,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		479CE4A42DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssesmentTests" */ = {
+		479CE4A42DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssessmentTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				479CE4A52DEDCB9900750F37 /* Debug */,
@@ -548,7 +550,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		479CE4A72DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssesmentUITests" */ = {
+		479CE4A72DEDCB9900750F37 /* Build configuration list for PBXNativeTarget "FetchTakeHomeAssessmentUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				479CE4A82DEDCB9900750F37 /* Debug */,
