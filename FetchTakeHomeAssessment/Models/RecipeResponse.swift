@@ -7,6 +7,10 @@
 
 import Foundation
 
+/// Represents the top-level JSON response from the recipes API.
 struct RecipeResponse: Decodable {
-    let recipes: [Recipe]
+    
+    /// An array of `Recipe` objects decoded from the `recipes` key in the API response.
+    let recipes: Recipes
 }
+

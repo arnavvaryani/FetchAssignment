@@ -7,80 +7,145 @@
 
 import SwiftUI
 
+/// Displays a searchable, sortable list of recipes with image previews and navigation to detail views.
 struct RecipeView: View {
-    @StateObject private var vm = RecipeViewModel()
-    @State private var searchText: String = ""
-    @Namespace private var animation
-
-    private var filteredRecipes: [Recipe] {
-        if searchText.isEmpty {
-            return vm.recipes
-        } else {
-            return vm.recipes.filter {
-                $0.name.localizedCaseInsensitiveContains(searchText) ||
-                $0.cuisine.localizedCaseInsensitiveContains(searchText)
-            }
-        }
-    }
-
+    /// View model responsible for all business logic and data management
+    @State private var vm = RecipeViewModel()
+    
     var body: some View {
         NavigationStack {
-            List(filteredRecipes) { recipe in
-                NavigationLink(value: recipe) {
-                    HStack(spacing: 12) {
-                        if let path = recipe.localImagePath,
-                           let uiImage = UIImage(contentsOfFile: path) {
-                            Image(uiImage: uiImage)
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: 60, height: 60)
-                                .clipped()
-                                .cornerRadius(8)
-                                .matchedGeometryEffect(id: recipe.id, in: animation)
-                        } else {
-                            Rectangle()
-                                .fill(Color.gray.opacity(0.2))
-                                .frame(width: 60, height: 60)
-                                .overlay(ProgressView())
-                        }
-
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(recipe.name)
-                                .font(.headline)
-                            Text(recipe.cuisine)
-                                .font(.subheadline)
-                                .foregroundStyle(.secondary)
-                        }
-                    }
-                    .padding(.vertical, 4)
-                    .transition(.opacity.combined(with: .scale))
-                    .animation(.easeInOut(duration: 1), value: recipe.id)
+            ZStack {
+                if vm.hasError {
+                    errorView
+                } else if vm.isEmpty {
+                    emptyView
+                } else {
+                    recipeList
                 }
             }
             .navigationTitle("Recipes")
-            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .automatic))
-            .refreshable {
-                await vm.loadRecipesFromAPI()
-            }
-            .navigationDestination(for: Recipe.self) { recipe in
-                RecipeDetailView(recipe: recipe)
-                    .matchedGeometryEffect(id: recipe.id, in: animation)
-            }
+            .searchable(text: $vm.searchText, placement: .navigationBarDrawer(displayMode: .automatic))
             .task {
                 await vm.loadRecipesFromAPI()
             }
-            .overlay {
-                if let msg = vm.errorMessage {
-                    Text("Error: \(msg)")
-                        .foregroundStyle(.red)
-                        .padding()
-                } else if vm.recipes.isEmpty {
-                    ContentUnavailableView("No Recipes", systemImage: "fork.knife", description: Text("Please check back later or try refreshing."))
-                }
+            .toolbar {
+                toolbarContent
             }
         }
     }
+        
+    private var recipeList: some View {
+        List(vm.filteredAndSortedRecipes) { recipe in
+            NavigationLink(value: recipe) {
+                RecipeRowView(
+                    recipe: recipe,
+                    image: vm.image(for: recipe.uuid)
+                )
+            }
+        }
+        .refreshable {
+            await vm.refreshRecipes()
+        }
+        .navigationDestination(for: Recipe.self) { recipe in
+            RecipeDetailView(
+                recipe: recipe,
+                cachedImage: vm.image(for: recipe.uuid)
+            )
+        }
+    }
+    
+    private var errorView: some View {
+        ContentUnavailableView(
+            "Something went wrong",
+            systemImage: "exclamationmark.triangle",
+            description: Text(vm.errorMessage ?? "Unknown error")
+        )
+    }
+    
+    private var emptyView: some View {
+        ContentUnavailableView(
+            "No Recipes",
+            systemImage: "fork.knife",
+            description: Text("Please try refreshing.")
+        )
+    }
+    
+    @ToolbarContentBuilder
+    private var toolbarContent: some ToolbarContent {
+        ToolbarItem(placement: .navigationBarTrailing) {
+            Button {
+                Task { await vm.refreshRecipes() }
+            } label: {
+                Image(systemName: "arrow.clockwise")
+            }
+            .help("Refresh Recipes")
+        }
+        
+        ToolbarItem(placement: .navigationBarTrailing) {
+            Menu {
+                ForEach(RecipeViewModel.SortOption.allCases) { option in
+                    Button {
+                        vm.sortOption = option
+                    } label: {
+                        Label(
+                            option.rawValue,
+                            systemImage: option == vm.sortOption ? "checkmark" : ""
+                        )
+                    }
+                }
+            } label: {
+                Image(systemName: "arrow.up.arrow.down")
+            }
+            .help("Sort Recipes")
+        }
+    }
 }
+
+/// A reusable row component for displaying a recipe in the list
+struct RecipeRowView: View {
+    let recipe: Recipe
+    let image: UIImage?
+    
+    var body: some View {
+        HStack(spacing: 12) {
+            recipeImage
+            recipeInfo
+        }
+        .padding(.vertical, 4)
+        .animation(.easeInOut(duration: 0.3), value: image != nil)
+    }
+    
+    private var recipeImage: some View {
+        Group {
+            if let img = image {
+                Image(uiImage: img)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            } else {
+                Rectangle()
+                    .fill(Color.gray.opacity(0.2))
+                    .overlay(ProgressView().scaleEffect(0.5))
+            }
+        }
+        .frame(width: 60, height: 60)
+        .clipped()
+        .cornerRadius(8)
+    }
+    
+    private var recipeInfo: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(recipe.name)
+                .font(.headline)
+                .lineLimit(2)
+            
+            Text(recipe.cuisine)
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+        }
+    }
+}
+
 #Preview {
     RecipeView()
 }
+
