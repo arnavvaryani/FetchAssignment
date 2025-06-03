@@ -1,6 +1,6 @@
 # Project Summary
 
-## Summary
+## Features
 
 - **Recipe list** with small thumbnail images and search functionality  
 - **Pull-to-refresh** gesture in action  
