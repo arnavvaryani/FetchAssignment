@@ -5,7 +5,6 @@
 //  Created by Arnav Varyani on 6/2/25.
 //
 
-
 import Foundation
 import SwiftUI
 import Observation
